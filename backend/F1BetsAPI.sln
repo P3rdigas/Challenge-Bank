@@ -4,7 +4,7 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{1AE8ACA6-933B-BF2A-3671-3E2EAC007D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApi", "backend\BankApi\BankApi.csproj", "{D68E6C45-BFBA-5DB3-B746-4D2734B13375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1BetsAPI", "backend\F1BetsAPI\F1BetsAPI.csproj", "{D68E6C45-BFBA-5DB3-B746-4D2734B13375}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
