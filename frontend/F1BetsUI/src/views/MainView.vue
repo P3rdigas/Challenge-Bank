@@ -2,7 +2,7 @@
 // Home page logic
     import { ref } from 'vue';
     import { signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
-    import { doc, collection, setDoc, query, where, getDocs, limit } from "firebase/firestore";
+    import { doc, collection, setDoc, query, where, getDocs, limit, serverTimestamp  } from "firebase/firestore";
     import { db, auth } from '../firebase.ts'
     import router from '../router/index.ts'
 
@@ -58,8 +58,9 @@
             const userCredential = await createUserWithEmailAndPassword(auth, registerForm.value.email, registerForm.value.password);
             await setDoc(doc(db, 'users', userCredential.user.uid), {
                 avatar: null,
-                createdAt: Date.now(),
+                createdAt: serverTimestamp(),
                 email: registerForm.value.email,
+                friends: [],
                 username: registerForm.value.username
                 
             });

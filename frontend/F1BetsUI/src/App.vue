@@ -7,8 +7,6 @@
   <RouterView />
 </template>
 
-#FF1801
-
 <style>
   * {
     margin: 0;

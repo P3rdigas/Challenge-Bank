@@ -30,10 +30,7 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to) => {
-    
   const currentUser = auth.currentUser ?? await authPromise;
-
-  console.log("Auth user:", currentUser);
 
   if (to.meta.requiresAuth && !currentUser) {
     return { name: 'Main' };
